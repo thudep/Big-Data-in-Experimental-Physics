@@ -1,0 +1,28 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v2
+        with:
+          mdbook-version: "latest"
+      - uses: supplypike/setup-bin@v4
+        with:
+          uri: "https://github.com/lzanini/mdbook-katex/releases/download/0.9.2-binaries/mdbook-katex-v0.9.2-x86_64-unknown-linux-gnu.tar.gz"
+          name: "mdbook-katex"
+          version: "0.9.2"
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          preCommands: mdbook build
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

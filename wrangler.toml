@@ -1,0 +1,4 @@
+assets = {directory = "./book"}
+compatibility_date = "2025-6-22"
+name = "BDiEP"
+workers_dev = false
