@@ -1,4 +1,4 @@
 assets = {directory = "./book"}
 compatibility_date = "2025-6-22"
-name = "BDiEP"
+name = "dbiep"
 workers_dev = false
