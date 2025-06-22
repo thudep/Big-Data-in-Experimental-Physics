@@ -5,6 +5,7 @@
   - [和续本达老师的个人主页](http://hep.tsinghua.edu.cn/~orv/teaching/physics-data/)
 - 课前培训
   - [Linux基本命令和WSL安装](./talk/Linux基本命令和WSL安装.md)
+  - [物理科协搭建的网站](https://bdep2025.dpsast.org)
 - 其它资料
   - [WSL2 安装教程](https://physics-data.meow.plus/faq/env/windows/)
   - [WSL2 安装视频](https://hep.tsinghua.edu.cn/~orv/teaching/physics-data/WSL2Tutorial.mp4)
